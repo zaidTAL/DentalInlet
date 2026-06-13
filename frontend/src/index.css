@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-teal: #032B30;
+  --brand-blue: #0A84B1;
+  --brand-bright: #0D61B9;
+  --brand-orange: #E67E22;
+  --brand-yellow: #F1C40F;
+  --cream: #F7F2EB;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans bg-secondary-light text-secondary-dark antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+/* Custom Cursor Styles */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--brand-blue);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  margin-top: -5px; /* Offset for centering if not using transform in GSAP */
+  margin-left: -5px;
+}
+
+.cursor-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: 2px solid var(--brand-blue);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  margin-top: -15px; /* Initial offset */
+  margin-left: -15px;
+  transition: width 0.3s, height 0.3s, border-color 0.3s, margin 0.3s;
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+/* Page Transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 400ms, transform 400ms;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 400ms, transform 400ms;
+}
