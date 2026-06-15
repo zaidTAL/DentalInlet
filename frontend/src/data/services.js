@@ -40,7 +40,7 @@ export const services = [
     category: "Prosthetics",
     icon: "Hammer",
     benefits: ['Restores chewing ability', 'Supports facial structure', 'Natural look', 'Custom fit'],
-    process: ['Gun protection & barier placement', 'Detailed impressions', 'Light activation', 'Final adjustments'],
+    process: ['Gum protection & barier placement', 'Detailed impressions', 'Light activation', 'Final adjustments'],
     wteToDisplay: true
   },
   {

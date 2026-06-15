@@ -239,7 +239,7 @@ const Home = () => {
           </div>
           <div className="max-w-4xl mb-20">
             <h2 className="text-2xl md:text-4xl font-black mb-12 tracking-tight italic font-serif text-white/90 leading-tight">
-              "I love this Dentist office. Dr Ahmad is so down to earth and goes above and beyond to make sure any dental work is nothing less than perfect. And the staff is so friendly and helpful. I will never go to any other dentist office but Easy Breezy Dental"
+              "I love this Dentist office. Dr Ahmad is so down to earth and goes above and beyond to make sure any dental work is nothing less than perfect. And the staff is so friendly and helpful. I will never go to any other dentist office but Dental Inlet"
             </h2>
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-full bg-brand-blue/20 border border-brand-blue/30 flex items-center justify-center font-serif italic text-brand-blue text-xl font-bold">MS</div>
@@ -277,7 +277,7 @@ const Home = () => {
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <h2 className="text-5xl md:text-7xl font-black text-white mb-8 tracking-tight">Ready for a<br />better smile?</h2>
           <p className="text-white/80 text-lg mb-12 max-w-xl mx-auto leading-relaxed">
-            {showPassword ? 'Secure Doctor Portal Access' : `Xray and exam consultation is for $69 only. Insurance is also accepted, As well as other payment methods like cash, check, and credit card.`}
+            {showPassword ? 'Secure Doctor Portal Access' : `EXAM AND XRAYS 69$ ONLY. WE ACCEPT MOST INRURANCES. WE ALSO OFFER PAYMENT PLANS.`}
           </p>
           <form className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-2xl mx-auto">
             <input

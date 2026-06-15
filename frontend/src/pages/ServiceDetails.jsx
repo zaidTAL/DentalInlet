@@ -82,8 +82,8 @@ const ServiceDetails = () => {
               <div className="bg-brand-teal rounded-[3rem] p-10 md:p-14 text-white shadow-2xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -mr-20 -mt-20" />
                 
-                <h3 className="text-3xl font-black mb-6 tracking-tight">Ready for your treatment?</h3>
-                <p className="text-white/60 mb-10 leading-relaxed font-light">Schedule a consultation with Dr. Ans to discuss if {service.name} is right for you.</p>
+                <h3 className="text-[2rem] font-black mb-6 tracking-tight">Ready for treatment? Book consultation today</h3>
+                <p className="text-white/60 mb-10 leading-relaxed font-light">Schedule a consultation with Dr. Ahmad to discuss if {service.name} is right for you.</p>
                 
                 <div className="space-y-4">
                   <Link 
