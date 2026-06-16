@@ -109,7 +109,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 w-full">
           <div className="max-w-4xl">
 
-            <h1 className="text-6xl md:text-9xl font-black text-brand-teal leading-[0.9] mb-10 tracking-tight" ref={titleRef}>
+            <h1 className="text-4xl md:text-6xl font-black text-brand-teal leading-[0.9] mb-10 tracking-tight" ref={titleRef}>
               <div className="overflow-hidden">Your best</div>
               <div className="overflow-hidden italic font-normal text-brand-blue">smile</div>
               <div className="overflow-hidden">starts here.</div>
@@ -165,7 +165,7 @@ const Home = () => {
       <section className="py-32 bg-white" id="services">
         <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
-            <h2 className="text-4xl md:text-6xl font-black text-brand-teal mb-20 tracking-tight">
+            <h2 className="text-3xl md:text-5xl font-black text-brand-teal mb-20 tracking-tight">
               Everything your smile <span className="italic text-brand-blue font-normal">needs.</span>
             </h2>
           </motion.div>
@@ -239,12 +239,12 @@ const Home = () => {
           </div>
           <div className="max-w-4xl mb-20">
             <h2 className="text-2xl md:text-4xl font-black mb-12 tracking-tight italic font-serif text-white/90 leading-tight">
-              "I love this Dentist office. Dr Ahmad is so down to earth and goes above and beyond to make sure any dental work is nothing less than perfect. And the staff is so friendly and helpful. I will never go to any other dentist office but Dental Inlet"
+              "I recommend them 100%; they are professionals and provide excellent service."
             </h2>
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-brand-blue/20 border border-brand-blue/30 flex items-center justify-center font-serif italic text-brand-blue text-xl font-bold">MS</div>
+              <div className="w-12 h-12 rounded-full bg-brand-blue/20 border border-brand-blue/30 flex items-center justify-center font-serif italic text-brand-blue text-xl font-bold">YD</div>
               <div>
-                <p className="font-bold tracking-tight">Elizabeth Barton.</p>
+                <p className="font-bold tracking-tight">Yoannis Desdin.</p>
                 <p className="text-xs text-white/40 uppercase tracking-widest">Google Review</p>
               </div>
             </div>
@@ -275,9 +275,10 @@ const Home = () => {
           <span className="text-[25vw] font-black text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 leading-none">SMILE</span>
         </div>
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <h2 className="text-5xl md:text-7xl font-black text-white mb-8 tracking-tight">Ready for a<br />better smile?</h2>
-          <p className="text-white/80 text-lg mb-12 max-w-xl mx-auto leading-relaxed">
-            {showPassword ? 'Secure Doctor Portal Access' : `EXAM AND XRAYS 69$ ONLY. WE ACCEPT MOST INRURANCES. WE ALSO OFFER PAYMENT PLANS.`}
+          <h2 className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tight">Worry Free Dental Care</h2>
+          <h4 className='text-white text-2xl font-bold mb-12 text-center tracking-tight md:text-3xl xl:text-4xl'>We Accept Insurance & Offer Flexible Payment Plans</h4>
+          <p className="text-white/80 text-base md:text-lg mb-12 max-w-xl mx-auto leading-relaxed">
+            {showPassword ? 'Secure Doctor Portal Access' : `Quality dental care shouldn't have to wait. We work with major insurance providers and offer payment plans that fit your budget - so you can focus on your smile, not the bill.`}
           </p>
           <form className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-2xl mx-auto">
             <input

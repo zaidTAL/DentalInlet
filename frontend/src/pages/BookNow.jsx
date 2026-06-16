@@ -61,7 +61,7 @@ const BookNow = () => {
       <section className="pt-40 pb-32 bg-secondary-light min-h-screen">
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-20">
           <div>
-            <h1 className="text-6xl md:text-8xl font-black text-brand-teal mb-8 tracking-tight leading-[0.9]">
+            <h1 className="text-5xl md:text-6xl font-black text-brand-teal mb-8 tracking-tight leading-[0.9]">
               Book your <span className="italic text-brand-blue font-normal font-serif">visit.</span>
             </h1>
             <p className="text-xl text-secondary-dark/60 max-w-md leading-relaxed font-light mb-12">

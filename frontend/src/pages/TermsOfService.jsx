@@ -18,7 +18,7 @@ const TermsOfService = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-6xl font-black text-brand-teal mb-8 tracking-tight">
+            <h1 className="text-3xl md:text-5xl font-black text-brand-teal mb-8 tracking-tight">
               Terms of Service
             </h1>
             <p className="text-secondary-dark/40 uppercase tracking-widest font-bold text-xs mb-12">

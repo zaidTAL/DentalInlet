@@ -48,7 +48,7 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-6xl md:text-8xl font-black text-brand-teal mb-8 tracking-tight">
+            <h1 className="text-5xl md:text-6xl font-black text-brand-teal mb-8 tracking-tight">
               Honest care for<br />
               <span className="italic text-brand-blue font-normal font-serif">every smile.</span>
             </h1>
@@ -63,7 +63,7 @@ const About = () => {
       <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div className="order-2 lg:order-1">
-            <h2 className="text-4xl md:text-5xl font-black text-brand-teal mb-8 tracking-tight">Our Story & Mission</h2>
+            <h2 className="text-3xl md:text-4xl font-black text-brand-teal mb-8 tracking-tight">Our Story & Mission</h2>
             <div className="space-y-6 text-secondary-dark/70 leading-relaxed font-light text-lg">
               <p>
                 Dental Inlet was found by Dr. Ans Ahmad with a simple goal: to create a dental practice that patients actually enjoy visiting. We saw a need for a clinic that combined high-end technology with a warm, neighborhood feel.
@@ -88,7 +88,7 @@ const About = () => {
       <section className="py-32 bg-brand-teal text-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-4xl md:text-6xl font-black mb-8 tracking-tight">Why Choose Us?</h2>
+            <h2 className="text-3xl md:text-5xl font-black mb-8 tracking-tight">Why Choose Us?</h2>
             <p className="text-white/60 text-lg font-light">We focus on the details that make your experience better, from the moment you book until your treatment is complete.</p>
           </div>
 

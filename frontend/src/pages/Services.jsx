@@ -28,7 +28,7 @@ const Services = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-6xl md:text-8xl font-black text-brand-teal mb-8 tracking-tight">
+            <h1 className="text-5xl md:text-6xl font-black text-brand-teal mb-8 tracking-tight">
               Our <span className="italic text-brand-blue font-normal font-serif">Services.</span>
             </h1>
             <p className="text-xl text-secondary-dark/60 max-w-2xl leading-relaxed font-light">

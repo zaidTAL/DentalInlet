@@ -62,7 +62,7 @@ const DoctorPortal = () => {
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="flex justify-between items-end mb-12">
             <div>
-              <h1 className="text-4xl md:text-6xl font-black text-brand-teal mb-4 tracking-tight">Doctor Portal</h1>
+              <h1 className="text-3xl md:text-5xl font-black text-brand-teal mb-4 tracking-tight">Doctor Portal</h1>
               <p className="text-secondary-dark/50 uppercase tracking-widest font-bold text-xs">Manage patient appointments & confirmations</p>
             </div>
             <div className="bg-white px-6 py-3 rounded-2xl shadow-sm border border-black/5">

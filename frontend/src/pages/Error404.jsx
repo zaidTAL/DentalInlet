@@ -30,7 +30,7 @@ const Error404 = () => {
             transition={{ delay: 0.2 }}
             className="relative z-10"
           >
-            <h1 className="text-5xl md:text-7xl font-black text-brand-teal mb-6 tracking-tight italic font-serif">
+            <h1 className="text-4xl md:text-5xl font-black text-brand-teal mb-6 tracking-tight italic font-serif">
               Lost in the<br />clouds?
             </h1>
             <p className="text-xl text-secondary-dark/50 mb-12 font-light leading-relaxed">

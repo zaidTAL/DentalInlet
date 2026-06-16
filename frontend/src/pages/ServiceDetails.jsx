@@ -54,7 +54,7 @@ const ServiceDetails = () => {
               <span className="inline-block px-4 py-1.5 rounded-full bg-brand-orange/10 text-brand-orange text-[0.65rem] font-bold uppercase tracking-widest mb-6">
                 {service.category}
               </span>
-              <h1 className="text-5xl md:text-7xl font-black text-brand-teal mb-8 tracking-tight leading-[0.9]">
+              <h1 className="text-4xl md:text-5xl font-black text-brand-teal mb-8 tracking-tight leading-[0.9]">
                 {service.name}
               </h1>
               <p className="text-xl text-secondary-dark/60 leading-relaxed font-light mb-12">
@@ -107,12 +107,12 @@ const ServiceDetails = () => {
 
       {service.wteToDisplay === true && <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
-          <h2 className="text-4xl md:text-6xl font-black text-brand-teal mb-20 tracking-tight italic font-serif">What to expect.</h2>
+          <h2 className="text-3xl md:text-5xl font-black text-brand-teal mb-20 tracking-tight italic font-serif">What to expect.</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             
             {service.process.map((step, index) => (
               <div key={index} className="text-left group">
-                <span className="block text-6xl font-black text-brand-blue/10 group-hover:text-brand-blue/20 transition-colors mb-4">0{index + 1}</span>
+                <span className="block text-4xl font-black text-brand-blue/10 group-hover:text-brand-blue/20 transition-colors mb-4">0{index + 1}</span>
                 <h3 className="text-2xl font-bold text-brand-teal mb-4 tracking-tight">{step}</h3>
               </div>
             ))}
