@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(helmet());
 
 // Enable CORS
-const corsOrigin = process.env.CORS_ORIGIN || '*';  
+const corsOrigin = process.env.CORS_ORIGIN || process.env.CORS_PROD_ORIGIN;  
 app.use(cors({
   origin: corsOrigin,
   credentials: true
