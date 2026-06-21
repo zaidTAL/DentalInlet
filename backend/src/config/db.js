@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 const connectDB = async () => {
   try {
@@ -7,19 +8,25 @@ const connectDB = async () => {
 
     if (env === 'production') {
       mongo_uri = process.env.MONGO_PROD_URI;
-    } else if (env === 'development') {
-      mongo_uri = process.env.MONGO_URI;
     } else {
       mongo_uri = process.env.MONGO_URI;
     }
 
-    const conn = await mongoose.connect(mongo_uri);
-    
-    console.log(`MongoDB Connected: ${conn.connection.host}`);
+    console.log('🔄 Connecting to MongoDB...');
+    console.log('URI (first 80 chars):', mongo_uri?.substring(0, 80) + '...');
+
+    const conn = await mongoose.connect(mongo_uri, {
+      serverSelectionTimeoutMS: 5000,
+      socketTimeoutMS: 45000,
+    });
+
+    console.log(`✅ MongoDB Connected: ${conn.connection.host}`);
   } catch (error) {
-    console.error(`Error: ${error.message}`);
-    console.error(error.stack);
-    process.exit(1);
+    console.error(`❌ MongoDB Connection Error: ${error.message}`);
+    console.error('Stack:', error.stack);
+    
+    // Don't exit immediately - let server start anyway
+    // process.exit(1);
   }
 };
 
