@@ -24,8 +24,9 @@ app.use(express.json());
 app.use(helmet());
 
 // Enable CORS
+const corsOrigin = process.env.CORS_PROD_ORIGIN;
 app.use(cors({
-  origin: process.env.CORS_PROD_ORIGIN || "https://dentalinlet.com",
+  origin: corsOrigin || "https://dentalinlet.com",
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS']
 }));
