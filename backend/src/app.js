@@ -26,8 +26,9 @@ app.use(helmet());
 // Enable CORS
 const corsOrigin = process.env.CORS_PROD_ORIGIN;  
 app.use(cors({
-  origin: corsOrigin || "https://dentalinlet.com/",
-  credentials: true
+  origin: corsOrigin.trim() || "https://dentalinlet.com/",
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS']
 }));
 
 // IP Blocking Middleware (Global)
