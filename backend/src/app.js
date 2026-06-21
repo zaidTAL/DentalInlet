@@ -26,7 +26,7 @@ app.use(helmet());
 // Enable CORS
 const corsOrigin = process.env.CORS_PROD_ORIGIN;
 app.use(cors({
-  origin: corsOrigin || "https://dentalinlet.com",
+  origin: "*",
   credentials: true
 }));
 
