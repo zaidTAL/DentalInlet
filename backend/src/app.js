@@ -19,7 +19,7 @@ connectDB();
 
 const app = express();
 
-// ✅ CRITICAL: Trust proxy (Must be FIRST before rate limiter)
+// ✅ CRITICAL:Trust proxy (Must be FIRST before rate limiter)
 app.set('trust proxy', 1);
 
 // Body parser
