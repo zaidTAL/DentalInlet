@@ -5,28 +5,45 @@ const connectDB = async () => {
   try {
     const env = process.env.NODE_ENV;
     let mongo_uri;
-
+    
     if (env === 'production') {
       mongo_uri = process.env.MONGO_PROD_URI;
     } else {
       mongo_uri = process.env.MONGO_URI;
     }
-
+    
     console.log('🔄 Connecting to MongoDB...');
+    console.log('Environment:', env);
     console.log('URI (first 80 chars):', mongo_uri?.substring(0, 80) + '...');
 
     const conn = await mongoose.connect(mongo_uri, {
-      serverSelectionTimeoutMS: 15000,
-      socketTimeoutMS: 45000,
+      // ✅ Connection timeout settings
+      serverSelectionTimeoutMS: 20000,   // 20 seconds (increased from 15)
+      socketTimeoutMS: 60000,            // 60 seconds (increased from 45)
+      
+      // ✅ Buffer timeout (Mongoose specific)
+      bufferTimeoutMS: 30000,            // 30 seconds for buffered commands
+      
+      // ✅ Pool settings (important for 512MB RAM)
+      maxPoolSize: 3,                    // Reduce for low memory
+      minPoolSize: 1,
+      
+      // ✅ Reliability options
+      retryWrites: true,
+      w: 'majority',
+      
+      // ✅ Network settings
+      family: 4                          // Force IPv4 (helps with some network issues)
     });
 
     console.log(`✅ MongoDB Connected: ${conn.connection.host}`);
+    return conn;
+    
   } catch (error) {
     console.error(`❌ MongoDB Connection Error: ${error.message}`);
-    console.error('Stack:', error.stack);
-    
-    // Don't exit immediately - let server start anyway
-    // process.exit(1);
+    console.error('Error Code:', error.code);
+    // Throw error so app.js knows it failed
+    throw error;
   }
 };
 
