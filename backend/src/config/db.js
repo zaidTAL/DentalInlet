@@ -21,9 +21,6 @@ const connectDB = async () => {
       serverSelectionTimeoutMS: 20000,   // 20 seconds (increased from 15)
       socketTimeoutMS: 60000,            // 60 seconds (increased from 45)
       
-      // ✅ Buffer timeout (Mongoose specific)
-      bufferTimeoutMS: 30000,            // 30 seconds for buffered commands
-      
       // ✅ Pool settings (important for 512MB RAM)
       maxPoolSize: 3,                    // Reduce for low memory
       minPoolSize: 1,
