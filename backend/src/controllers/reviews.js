@@ -6,6 +6,13 @@ const Review = require('../models/Review');
 exports.getReviews = async (req, res, next) => {
   try {
     // Return all reviews for now as requested
+    console.log('📍 DB Ready State:', mongoose.connection.readyState);
+    // 0 = disconnected, 1 = connected, 2 = connecting, 3 = disconnecting
+    
+    if (mongoose.connection.readyState !== 1) {
+      return res.status(503).json({ error: 'DB not connected' });
+    }
+
     const reviews = await Review.find().sort({ createdAt: -1 });
     res.status(200).json({
       success: true,
