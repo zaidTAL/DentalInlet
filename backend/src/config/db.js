@@ -20,17 +20,6 @@ const connectDB = async () => {
       // ✅ Connection timeout settings
       serverSelectionTimeoutMS: 20000,   // 20 seconds (increased from 15)
       socketTimeoutMS: 60000,            // 60 seconds (increased from 45)
-      
-      // ✅ Pool settings (important for 512MB RAM)
-      maxPoolSize: 3,                    // Reduce for low memory
-      minPoolSize: 1,
-      
-      // ✅ Reliability options
-      retryWrites: true,
-      w: 'majority',
-      
-      // ✅ Network settings
-      family: 4                          // Force IPv4 (helps with some network issues)
     });
 
     console.log(`✅ MongoDB Connected: ${conn.connection.host}`);
